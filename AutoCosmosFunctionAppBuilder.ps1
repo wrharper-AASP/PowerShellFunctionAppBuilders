@@ -1,4 +1,5 @@
-$collectionOfArgs = @("C:\Users\Administrator\source\repos\RESTAPI\RESTAPI.sln","/target:Clean","/target:Build")
+$pathh = "C:\Users\" + $env:UserName + "\source\repos\RESTAPI\RESTAPI.sln"
+$collectionOfArgs = @($pathh,"/target:Clean","/target:Build")
 msbuild $collectionOfArgs
 
 $path = "C:\Users\Administrator\source\repos\RESTAPI\RESTAPI\bin\Debug\net6.0\"
