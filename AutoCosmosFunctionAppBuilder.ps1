@@ -2,7 +2,7 @@ $pathh = "C:\Users\" + $env:UserName + "\source\repos\RESTAPI\RESTAPI.sln"
 $collectionOfArgs = @($pathh,"/target:Clean","/target:Build")
 msbuild $collectionOfArgs
 
-$path = "C:\Users\Administrator\source\repos\RESTAPI\RESTAPI\bin\Debug\net6.0\"
+$path = "C:\Users\" + $env:UserName + "\source\repos\RESTAPI\RESTAPI\bin\Debug\net6.0\"
 $binpath = $path + "bin\" #lots of files
 $queuetrigger = $path + "Function1\" #1 file
 #$runtimespath = $binpath + "runtimes\"
