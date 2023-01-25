@@ -1,4 +1,4 @@
-$pathh = "C:\Users\" + $env:UserName + "\source\repos\RESTAPI\RESTAPI.sln"
+$pathh = "C:\Users\" + $env:UserName + "\source\repos\RESTAPI\CosmosRestAPI.sln"
 $collectionOfArgs = @($pathh,"/target:Clean","/target:Build")
 msbuild $collectionOfArgs
 
@@ -156,8 +156,8 @@ $files = @(
     "System.Text.Json.dll"
     "vcruntime140.dll"
     "vcruntime140_1.dll"
-    "RESTAPI.dll"
-    "RESTAPI.pdb"
+    "CosmosRestAPI.dll"
+    "CosmosRestAPI.pdb"
 )
 
 $directory = $path + "runtimes"
@@ -180,7 +180,7 @@ Compress-Archive -Path $fullpath -DestinationPath $destination
 Remove-Item -Recurse -Force $binpath
 Remove-Item -Recurse -Force $queuetrigger
 $hostfile = $path + "host.json"
-$dependfile = $path + "RESTAPI.deps.json"
+$dependfile = $path + "CosmosRestAPI.deps.json"
 Remove-Item -Recurse -Force $hostfile
 Remove-Item -Recurse -Force $dependfile
 
